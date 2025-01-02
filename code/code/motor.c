@@ -96,10 +96,8 @@ uint16_t updateMotorSpeed() {
 	}
 
 	float I_out = Ki * integral;
-
 	float derivative = error - previous_error;
 	float D_out = Kd * derivative;
-
 	float motorOutput = P_out + I_out + D_out;
 	setMotorPWM(motorOutput);
 
